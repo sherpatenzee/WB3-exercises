@@ -21,7 +21,7 @@ function displayreceipt(totalDue, amountpaid){
   console.log(message2)
 
  if( amountpaid < totalDue){
-  let amt =totalDue - amountpaid;
+  let amt = totalDue - amountpaid;
   let message="You nede to pay $" + amt + " more";
   console.log(message)
  }
