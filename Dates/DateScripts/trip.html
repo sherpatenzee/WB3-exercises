@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Travel Date:</h2>
+    <input type="date" id="box" />
+    <input id="btn" type="button" value="Submit" />
+
+    <p id="msg">Message Here</p>
+    <script>
+      "use strict";
+
+      window.onload = init;
+
+      function init() {
+        const submitBtn = document.getElementById("btn");
+        submitBtn.onclick = onBtnClicked;
+      }
+
+      function onBtnClicked() {
+        let input = document.getElementById("box");
+        let end = new Date(input.value);
+
+        let startDate = new Date();
+
+        let milSec = 1000 * 60 * 60 * 24;
+
+        let dayMilSec = end.getTime() - startDate.getTime();
+
+        let day = dayMilSec / milSec;
+        
+
+        let display = document.getElementById("msg");
+        display.innerHTML = "Your trip is in " + Math.round(day + 1) + " days.";
+      }
+    </script>
+  </body>
+</html>
