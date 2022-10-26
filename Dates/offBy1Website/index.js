@@ -13,6 +13,7 @@ function onBtnClicked()
 {
   let input = document.getElementById("box");
   let date = input.value;
+  let d = new Date(date);
   let display = document.getElementById("msg");
-  display.innerHTML = date.toString();
+  display.innerHTML = d.toString();
 }
