@@ -26,3 +26,25 @@ console.log(productNumber);
 
 let productSize = getProductSize(code);
 console.log(productSize);
+
+
+code = "DI:12345-M";
+supplier = getSupplierCode(code);
+console.log(supplier);
+
+ productNumber = getProductNumber(code);
+console.log(productNumber);
+
+productSize = getProductSize(code);
+console.log(productSize);
+
+
+code = "ACE:1-12";
+supplier = getSupplierCode(code);
+console.log(supplier);
+
+productNumber = getProductNumber(code);
+console.log(productNumber);
+
+productSize = getProductSize(code);
+console.log(productSize);
